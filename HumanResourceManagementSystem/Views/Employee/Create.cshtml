@@ -1,0 +1,203 @@
+﻿@model HumanResourceManagementSystem.Models.Entities.Employee
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="Container_Body">
+    <div class="container_header">
+        Human Resource Management System
+    </div>
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <br />
+            <div class="container_first">
+                <div class="CF_header">PERSONAL INFORMATION</div>
+                <div class="first_data">
+                    <div class="form-group">
+                        <label asp-for="PersonalInfo.FirstName" class="control-label"></label>
+                        <input asp-for="PersonalInfo.FirstName" class="form-control" />
+                        <span asp-validation-for="PersonalInfo.FirstName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PersonalInfo.MiddleName" class="control-label"></label>
+                        <input asp-for="PersonalInfo.MiddleName" class="form-control" />
+                        <span asp-validation-for="PersonalInfo.MiddleName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PersonalInfo.LastName" class="control-label"></label>
+                        <input asp-for="PersonalInfo.LastName" class="form-control" />
+                            <span asp-validation-for="PersonalInfo.LastName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="first_data">
+                    <div class="form-group">
+                        <label asp-for="PersonalInfo.DOB" class="control-label"></label>
+                        <input asp-for="PersonalInfo.DOB" class="form-control" />
+                        <span asp-validation-for="PersonalInfo.DOB" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PersonalInfo.Age" class="control-label"></label>
+                        <input asp-for="PersonalInfo.Age" class="form-control" />
+                        <span asp-validation-for="PersonalInfo.Age" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PersonalInfo.Gender" class="control-label"></label>
+                        <input asp-for="PersonalInfo.Gender" class="form-control" />
+                        <span asp-validation-for="PersonalInfo.Gender" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="container_second">
+                <div class="CF_header">ADDRESS AND CONTACT DETAILS</div>
+                <div class="first_data">
+                    <div class="form-group">
+                        <label asp-for="AddressInfo.Street1" class="control-label"></label>
+                        <input asp-for="AddressInfo.Street1" class="form-control" />
+                        <span asp-validation-for="AddressInfo.Street1" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="AddressInfo.Street2" class="control-label"></label>
+                        <input asp-for="AddressInfo.Street2" class="form-control" />
+                        <span asp-validation-for="AddressInfo.Street2" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="AddressInfo.Locality" class="control-label"></label>
+                        <input asp-for="AddressInfo.Locality" class="form-control" />
+                        <span asp-validation-for="AddressInfo.Locality" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="first_data">
+                    <div class="form-group">
+                        <label asp-for="AddressInfo.City" class="control-label"></label>
+                        <input asp-for="AddressInfo.City" class="form-control" />
+                        <span asp-validation-for="AddressInfo.City" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="AddressInfo.State" class="control-label"></label>
+                        <input asp-for="AddressInfo.State" class="form-control" />
+                        <span asp-validation-for="AddressInfo.State" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="AddressInfo.Country" class="control-label"></label>
+                        <input asp-for="AddressInfo.Country" class="form-control" />
+                        <span asp-validation-for="AddressInfo.Country" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="first_data">
+                    <div class="form-group">
+                        <label asp-for="AddressInfo.Email" class="control-label"></label>
+                        <input asp-for="AddressInfo.Email" class="form-control" />
+                        <span asp-validation-for="AddressInfo.Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="AddressInfo.AEmail" class="control-label"></label>
+                        <input asp-for="AddressInfo.AEmail" class="form-control" />
+                        <span asp-validation-for="AddressInfo.AEmail" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="first_data">
+                    <div class="form-group">
+                        <label asp-for="AddressInfo.Mobile" class="control-label"></label>
+                        <input asp-for="AddressInfo.Mobile" class="form-control" />
+                        <span asp-validation-for="AddressInfo.Mobile" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="AddressInfo.Phone" class="control-label"></label>
+                        <input asp-for="AddressInfo.Phone" class="form-control" />
+                        <span asp-validation-for="AddressInfo.Phone" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="container_third">
+                <div class="CF_header">EDUCATIONAL DETAILS</div>
+                <div class="first_data">
+                    <div class="form-group">
+                        <label asp-for="EducationalInfo.BDegree" class="control-label" style="width:130px"></label>
+                        <input asp-for="EducationalInfo.BDegree" class="form-control" style="margin-left:-10px;"/>
+                        <span asp-validation-for="EducationalInfo.BDegree" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EducationalInfo.BMarks" class="control-label"></label>
+                        <input asp-for="EducationalInfo.BMarks" class="form-control" style="width:80px;margin-left:-80px;"/>
+                        <span asp-validation-for="EducationalInfo.BMarks" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EducationalInfo.MDegree" class="control-label"></label>
+                        <input asp-for="EducationalInfo.MDegree" class="form-control" />
+                        <span asp-validation-for="EducationalInfo.MDegree" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="EducationalInfo.MMarks" class="control-label"></label>
+                        <input asp-for="EducationalInfo.MMarks" class="form-control" style="width:80px;margin-left:-80px;"/>
+                        <span asp-validation-for="EducationalInfo.MMarks" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="first_data">
+                    <div class="form-group">
+                        <label asp-for="EducationalInfo.AEC" class="control-label"></label>
+                        <input asp-for="EducationalInfo.AEC" class="form-control" />
+                        <span asp-validation-for="EducationalInfo.AEC" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="container_fourth">
+                <div class="CF_header">CIVIL INFORMATION</div>
+                <div class="first_data">
+                    <div class="form-group">
+                        <label asp-for="CivilInfo.Nationality" class="control-label"></label>
+                        <input asp-for="CivilInfo.Nationality" class="form-control" />
+                        <span asp-validation-for="CivilInfo.Nationality" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CivilInfo.PanCard" class="control-label"></label>
+                        <input asp-for="CivilInfo.PanCard" class="form-control" />
+                        <span asp-validation-for="CivilInfo.PanCard" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="container_fifth">
+                <div class="CF_header">OFFICIAL INFORMATION</div>
+                <div class="first_data">
+                    <div class="form-group">
+                        <label asp-for="OfficialInfo.MID" class="control-label"></label>
+                        <input asp-for="OfficialInfo.MID" class="form-control" />
+                        <span asp-validation-for="OfficialInfo.MID" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="OfficialInfo.Location" class="control-label"></label>
+                        <input asp-for="OfficialInfo.Location" class="form-control" />
+                        <span asp-validation-for="OfficialInfo.Location" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="first_data">
+                    <div class="form-group">
+                        <label asp-for="OfficialInfo.Department" class="control-label"></label>
+                        <input asp-for="OfficialInfo.Department" class="form-control" />
+                        <span asp-validation-for="OfficialInfo.Department" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="OfficialInfo.Address" class="control-label"></label>
+                        <input asp-for="OfficialInfo.Address" class="form-control" />
+                        <span asp-validation-for="OfficialInfo.Address" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+    <div class="container_footer">
+        Human Resource Management System
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
